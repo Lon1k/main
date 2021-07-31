@@ -1,27 +1,42 @@
 from tkinter import *
 
-def click():
-    res = txt.get()
-    print(f"Привет, {res}")
-    lbl.configure(text=f"Привет, {res}")
-
+#window--------------------=+
 window = Tk()
 window.title("Ха-ха")
 window.geometry("500x500")
-
+#Функции-------------------=+
+def click():
+    res = txt.get()
+    lbl.configure(text=f"Привет, {res}")
+#Элементы------------------=+
 lbl = Label(window, 
-            text="Привет",
-            font=(10))
-lbl.grid(column=0, row=0)
-
-
+            text="Привет",)
 btn = Button(window,
             text="Не нажимать",
-            command=click,
-            )
+            command=click,)
+txt = Entry(window,width=10, state="disabled")
+#Grid----------------------=+
+lbl.grid(column=0, row=0)
 btn.grid(column=1, row=0)
-
-txt = Entry(window,width=10)
 txt.grid(column=2,row=0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.mainloop()
