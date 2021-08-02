@@ -1,17 +1,8 @@
-from tkinter import *
-from tkinter.ttk import Combobox, Checkbutton,
-#window--------------------=+
-window = Tk()
-window.title("Ха-ха")
-window.geometry("500x500")
-#Функции-------------------=+
+import time
 
-#Элементы------------------=+
-chk_state = IntVar()
-chk_state.set(0)
-chk = Checkbutton(window, text="Выбрать", var=chk_state)
-#Grid----------------------=+
-chk.grid(column=0,row=0)
-
-
-window.mainloop()
+i = 0
+while i<100:
+    time.sleep(0.5)
+    i+=1
+    print(f"Russia suck {str(i)} dicks")
+    
